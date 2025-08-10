@@ -1,6 +1,8 @@
 
 ZSH_THEME="crunch"
 
+
+####### IMPORTANT - some of the plugins require explict git clone ##########
 plugins=(git scd copybuffer  copyfile copydir jsontools history zsh-autosuggestions docker docker-compose zsh-fzf-history-search helm) 
 alias tf="terraform"
 alias mk="minikube"
