@@ -108,3 +108,10 @@ endif
 set nocp
 " CDC = Change to Directory of Current file
 command CDC cd %:p:h
+
+" ####### Custom mapping ##########
+" ---------------------------------
+" Disable default backspace behavior for Ctrl-h in visual mode
+vunmap <C-h>
+" Map Ctrl-h to the history command in visual mode
+vmap <C-h> :history<CR>
