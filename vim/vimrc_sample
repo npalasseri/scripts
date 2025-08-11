@@ -42,16 +42,7 @@ set nowrap
 
 " Pathogen https://github.com/tpope/vim-pathogen is a autoload utility for plugins
 execute pathogen#infect()
-" The solarized colorscheme 
-if has('gui_running')
-  set background=light
-  colorscheme solarized
-else
-  set background=dark
-endif
-set nocp
-" CDC = Change to Directory of Current file
-command CDC cd %:p:h
+
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -103,7 +94,17 @@ call plug#begin()
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
 call plug#end()
+
 " You can revert the settings after the call like so:
 "   filetype indent off   " Disable file-type-specific indentation
 "   syntax off            " Disable syntax highlighting
-
+" The solarized colorscheme 
+if has('gui_running')
+  set background=light
+  colorscheme solarized
+else
+  set background=dark
+endif
+set nocp
+" CDC = Change to Directory of Current file
+command CDC cd %:p:h
