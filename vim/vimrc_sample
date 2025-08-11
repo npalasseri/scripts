@@ -111,7 +111,5 @@ command CDC cd %:p:h
 
 " ####### Custom mapping ##########
 " ---------------------------------
-" Disable default backspace behavior for Ctrl-h in visual mode
-silent! vunmap <C-h>
-" Map Ctrl-h to the history command in visual mode
+" Map Ctrl-h to the history command in normal mode
 nmap <C-h> :History<CR>
